@@ -1,9 +1,12 @@
 import pandas as pd
-from create_folder import create_folder_csv, create_json
+import os
+from create_folder import create_folder_csv, zero, double
 
 
-def retrieve_csv_info(path):
-    df = pd.read_csv(path)
+def retrieve_csv_info(path, report):
+    file_name = os.listdir(path)[-1]
+    file_path = os.path.join(path, file_name)
+    df = pd.read_csv(file_path)
     properties = df.filter(like="Property Name").values.flatten().tolist()
     units = df.filter(like="Space Number").values.flatten().tolist()
-    return properties, units
+    return [properties, units, report]

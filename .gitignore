@@ -2,3 +2,4 @@ venv
 .vscode
 reports
 config.py
+__pycache__
