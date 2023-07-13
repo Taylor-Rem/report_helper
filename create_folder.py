@@ -23,6 +23,10 @@ def create_folder_csv(report):
     return path
 
 
+create_folder_csv(zero)
+create_folder_csv(double)
+
+
 def json_path(report):
     path = f"/Users/{username}/Desktop/report_helper/reports/{report}/{year}/"
     if not os.path.exists(path):

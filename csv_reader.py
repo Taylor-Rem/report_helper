@@ -1,6 +1,5 @@
 import pandas as pd
 import os
-from create_folder import create_folder_csv, zero, double
 
 
 def retrieve_csv_info(path, report):
